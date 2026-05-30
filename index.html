@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net; font-src fonts.gstatic.com cdn.jsdelivr.net; connect-src 'self' https://henre-cv-proxy.venterhenre.workers.dev; img-src 'self' data:;" />
 
   <style>
     :root {
@@ -443,11 +444,14 @@ Key facts:
         });
         const data = await res.json();
         typing.remove();
-        const reply = data.content?.[0]?.text || "Happy to tell you more — reach me at venterhenre@gmail.com.";
-        addMsg(reply, 'ai');
-      } catch {
+        if (data.content?.[0]?.text) {
+          addMsg(data.content[0].text, 'ai');
+        } else {
+          addMsg('Error: ' + JSON.stringify(data), 'ai');
+        }
+      } catch (err) {
         typing.remove();
-        addMsg("Something went wrong — reach me directly at venterhenre@gmail.com.", 'ai');
+        addMsg("Fetch error: " + err.message, 'ai');
       }
       btn.disabled = false;
     }
