@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henré Venter · Head of Portfolio Operations</title>
+  <meta name="description" content="Senior operations leader scaling property businesses, building high-performance teams, and engineering AI-powered systems that cut cost and drive yield. Based in London." />
+
+  <!-- Open Graph / LinkedIn preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Henré Venter · Head of Portfolio Operations" />
+  <meta property="og:description" content="Operations leader with 8+ years scaling property startups across SA and the UK. Delivered 50% cost reduction, +70pt NPS improvement, and building AI systems that run in production. Interactive CV powered by Claude." />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f5f4f0;
+      --bg-info: #e6f1fb;
+      --text-primary: #1a1a18;
+      --text-secondary: #6b6b67;
+      --text-info: #185fa5;
+      --border-light: rgba(0,0,0,0.1);
+      --border-mid: rgba(0,0,0,0.18);
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-primary: #1a1a18;
+        --bg-secondary: #242422;
+        --bg-info: #0c447c;
+        --text-primary: #f0efeb;
+        --text-secondary: #9a9994;
+        --text-info: #85b7eb;
+        --border-light: rgba(255,255,255,0.1);
+        --border-mid: rgba(255,255,255,0.18);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 0 4rem;
+    }
+
+    .hero { padding: 2.5rem 2rem 2rem; border-bottom: 0.5px solid var(--border-light); position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 220px; height: 220px; border-radius: 50%; background: var(--bg-secondary); z-index: 0; }
+    .hero-inner { position: relative; z-index: 1; }
+    .hero-tag { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-info); background: var(--bg-info); padding: 4px 10px; border-radius: var(--radius-md); margin-bottom: 1rem; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 38px; font-weight: 400; line-height: 1.1; margin-bottom: 0.4rem; }
+    .hero h1 em { font-style: italic; color: var(--text-secondary); }
+    .hero-subtitle { font-size: 15px; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.6; max-width: 520px; }
+    .hero-philosophy { font-size: 13px; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6; max-width: 500px; padding: 0.75rem 1rem; background: var(--bg-secondary); border-left: 2px solid var(--border-mid); border-radius: 0; }
+    .hero-meta { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-secondary); margin-bottom: 1.25rem; }
+    .hero-stats { display: flex; gap: 24px; flex-wrap: wrap; }
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-num { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--text-primary); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 3px; }
+
+    .nav-tabs { display: flex; border-bottom: 0.5px solid var(--border-light); overflow-x: auto; position: sticky; top: 0; background: var(--bg-primary); z-index: 10; }
+    .nav-tab { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 12px 18px; background: none; border: none; cursor: pointer; color: var(--text-secondary); border-bottom: 2px solid transparent; white-space: nowrap; }
+    .nav-tab.active { color: var(--text-primary); border-bottom: 2px solid var(--text-primary); }
+
+    .tab-content { display: none; padding: 1.5rem 2rem; }
+    .tab-content.active { display: block; }
+
+    .impact-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 1.25rem 0; }
+    .impact-card { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1rem; text-align: center; }
+    .impact-num { font-family: 'DM Serif Display', serif; font-size: 24px; line-height: 1; color: var(--text-primary); }
+    .impact-desc { font-size: 11px; color: var(--text-secondary); margin-top: 4px; line-height: 1.4; }
+
+    .exp-item { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 1.25rem 0; border-bottom: 0.5px solid var(--border-light); }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-period { font-size: 12px; color: var(--text-secondary); padding-top: 2px; line-height: 1.4; }
+    .exp-co { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-info); margin-bottom: 2px; }
+    .exp-role { font-family: 'DM Serif Display', serif; font-size: 17px; font-weight: 400; margin-bottom: 6px; color: var(--text-primary); }
+    .exp-body { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .exp-tag { font-size: 11px; padding: 3px 8px; border-radius: var(--radius-md); background: var(--bg-secondary); color: var(--text-secondary); border: 0.5px solid var(--border-light); }
+
+    .section-divider { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); padding: 1rem 0 0.25rem; border-top: 0.5px solid var(--border-light); margin-top: 0.5rem; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+    .skill-card { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1rem 1.1rem; }
+    .skill-icon { font-size: 20px; margin-bottom: 8px; color: var(--text-secondary); }
+    .skill-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; color: var(--text-primary); }
+    .skill-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+    .ai-intro { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.25rem; font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+    .ai-intro strong { color: var(--text-primary); font-weight: 500; }
+
+    .chat-window { border: 0.5px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; }
+    .chat-header { padding: 10px 14px; border-bottom: 0.5px solid var(--border-light); font-size: 12px; font-weight: 500; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
+    .chat-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; flex-shrink: 0; }
+    .chat-messages { padding: 1rem; min-height: 180px; max-height: 340px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; background: var(--bg-primary); }
+    .msg { max-width: 85%; font-size: 13px; line-height: 1.5; padding: 8px 12px; border-radius: 12px; }
+    .msg-user { align-self: flex-end; background: var(--text-primary); color: var(--bg-primary); border-bottom-right-radius: 4px; }
+    .msg-ai { align-self: flex-start; background: var(--bg-secondary); color: var(--text-primary); border-bottom-left-radius: 4px; }
+    .msg-typing { align-self: flex-start; padding: 10px 14px; background: var(--bg-secondary); border-radius: 12px; border-bottom-left-radius: 4px; }
+    .typing-dots { display: flex; gap: 4px; }
+    .typing-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--text-secondary); animation: bounce 1s infinite; }
+    .typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+
+    .chat-input-row { display: flex; gap: 8px; padding: 10px; border-top: 0.5px solid var(--border-light); background: var(--bg-primary); }
+    .chat-input { flex: 1; font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 8px 12px; border-radius: var(--radius-md); border: 0.5px solid var(--border-mid); background: var(--bg-primary); color: var(--text-primary); outline: none; }
+    .chat-input:focus { border-color: var(--text-secondary); }
+    .chat-send { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: var(--radius-md); border: none; background: var(--text-primary); color: var(--bg-primary); cursor: pointer; }
+    .chat-send:disabled { opacity: 0.4; cursor: default; }
+
+    .suggested-qs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+    .sq-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; padding: 5px 10px; border-radius: var(--radius-md); border: 0.5px solid var(--border-mid); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; }
+    .sq-btn:hover { background: var(--bg-secondary); }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .contact-card { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1rem 1.25rem; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
+    .contact-icon { font-size: 20px; color: var(--text-secondary); flex-shrink: 0; }
+    .contact-label { font-size: 11px; color: var(--text-secondary); }
+    .contact-val { font-size: 13px; font-weight: 500; color: var(--text-primary); }
+
+    @media (max-width: 520px) {
+      .exp-item { grid-template-columns: 1fr; gap: 4px; }
+      .exp-period { padding-top: 0; }
+      .impact-row { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 16px; }
+      body { padding-bottom: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">Interactive CV · AI-powered</div>
+      <h1>Henré<br><em>Venter</em></h1>
+      <p class="hero-subtitle">Operations leader who scales property businesses, builds high-performance teams, and engineers the systems that cut cost and drive yield — across South Africa and the UK.</p>
+      <div class="hero-philosophy">I believe the best operations are invisible to the customer and unmistakable on the P&L. My approach is simple: hire well, resource smartly, remove friction, and build systems that scale without you.</div>
+      <div class="hero-meta">
+        <i class="ti ti-map-pin" style="font-size:15px" aria-hidden="true"></i>
+        London, UK
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-num">8+</span><span class="stat-label">Years ops leadership</span></div>
+        <div class="stat-item"><span class="stat-num">5 cities</span><span class="stat-label">Teams built across UK</span></div>
+        <div class="stat-item"><span class="stat-num">50%</span><span class="stat-label">Cost reduction delivered</span></div>
+        <div class="stat-item"><span class="stat-num">+70pts</span><span class="stat-label">Average NPS improvement</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showTab('experience', this)">Experience</button>
+    <button class="nav-tab" onclick="showTab('ai-demo', this)">Ask the CV ✦</button>
+    <button class="nav-tab" onclick="showTab('skills', this)">Skills & AI</button>
+    <button class="nav-tab" onclick="showTab('contact', this)">Contact</button>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div id="tab-experience" class="tab-content active">
+    <div class="impact-row">
+      <div class="impact-card"><div class="impact-num">–50%</div><div class="impact-desc">Cost reduction via smart resourcing & process redesign</div></div>
+      <div class="impact-card"><div class="impact-num">+74%</div><div class="impact-desc">CSAT improvement across regional UK teams</div></div>
+      <div class="impact-card"><div class="impact-num">100</div><div class="impact-desc">NPS for 6 consecutive months (Cape Town)</div></div>
+      <div class="impact-card"><div class="impact-num">800+</div><div class="impact-desc">Properties across operational budget responsibility</div></div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Mar 2026 – Present</div>
+      <div>
+        <div class="exp-co">Flyp Homes · Current role</div>
+        <div class="exp-role">Head of Portfolio Operations</div>
+        <div class="exp-body">Accountable for unlocking and driving yield across the full property portfolio, with P&L responsibility spanning the GX, Operations, and Client Success functions. Architecting AI-powered maintenance triage and automation workflows — using n8n, the Claude API, Breezeway, Slack, and Gmail — to shift the team from reactive firefighting to proactive, data-led operations.</div>
+        <div class="exp-tags"><span class="exp-tag">P&L Ownership</span><span class="exp-tag">Yield Optimisation</span><span class="exp-tag">AI & Automation</span><span class="exp-tag">n8n</span><span class="exp-tag">Breezeway</span><span class="exp-tag">Team Leadership</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Sep 2023 – Mar 2026</div>
+      <div>
+        <div class="exp-co">Flyp London</div>
+        <div class="exp-role">Head of Client Success</div>
+        <div class="exp-body">Built and led the Client Success function from inception — defining the operating model, playbooks, and team structure for 200+ customers across the full lifecycle. Owned NPS and CSAT as board-level metrics, managed the CS budget, and served as the primary voice of the customer influencing product and commercial strategy.</div>
+        <div class="exp-tags"><span class="exp-tag">Function Built from Scratch</span><span class="exp-tag">Budget Ownership</span><span class="exp-tag">NPS / CSAT</span><span class="exp-tag">Product Influence</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Jun 2022 – Aug 2023</div>
+      <div>
+        <div class="exp-co">Houst · London</div>
+        <div class="exp-role">UKI Manager, Client Success & Account Management</div>
+        <div class="exp-body">Led 5 team leads and 30 staff across 800+ UK properties. Drove NPS from –50 to +20 and CSAT from 60% to 85% through operational transformation and coaching. Delivered 50% cost reduction by redesigning the resourcing model around remote hiring — without compromising service quality. Managed the full operational budget for the UKI CS function.</div>
+        <div class="exp-tags"><span class="exp-tag">30-person team</span><span class="exp-tag">NPS –50 → +20</span><span class="exp-tag">CSAT 60 → 85%</span><span class="exp-tag">–50% Cost</span><span class="exp-tag">Budget Management</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Aug 2021 – Jun 2022</div>
+      <div>
+        <div class="exp-co">Houst · London</div>
+        <div class="exp-role">Manager, Accounts & Client Success</div>
+        <div class="exp-body">End-to-end management of regional offices across Bath, Brighton, Bristol, East London, and Manchester. Increased NPS by 54%, CSAT by 74%, and exceeded commercial OKRs. Streamlined internal workflows and built a high-performing regional team through structured performance management and development.</div>
+        <div class="exp-tags"><span class="exp-tag">5 regional offices</span><span class="exp-tag">NPS +54%</span><span class="exp-tag">CSAT +74%</span><span class="exp-tag">OKR delivery</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Jul 2020 – Aug 2021</div>
+      <div>
+        <div class="exp-co">Houst · Cape Town</div>
+        <div class="exp-role">City Manager</div>
+        <div class="exp-body">Full P&L accountability for Cape Town operations. Scaled the city to the Southern Suburbs within two months of joining. Maintained a perfect 100 NPS for 6 consecutive months. Delivered major cost savings through supply chain redesign and smart ground team resourcing — laying the blueprint for subsequent market entries.</div>
+        <div class="exp-tags"><span class="exp-tag">P&L Accountability</span><span class="exp-tag">100 NPS × 6 months</span><span class="exp-tag">Market Expansion</span><span class="exp-tag">Supply Chain</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Aug 2018 – Feb 2019</div>
+      <div>
+        <div class="exp-co">Houst · Cape Town</div>
+        <div class="exp-role">Supplier Manager</div>
+        <div class="exp-body">Built Houst's supplier and partner network in Cape Town from zero, establishing the operational foundation for a new market entry — managing contracts, quality standards, and stakeholder relationships across a nascent supply base.</div>
+      </div>
+    </div>
+
+    <div class="section-divider">Earlier career · the foundations</div>
+
+    <div class="exp-item">
+      <div class="exp-period">Apr 2017 – Jul 2018</div>
+      <div>
+        <div class="exp-co">Shoprite Holdings · Checkers Food Services, SA</div>
+        <div class="exp-role">Key Account Representative</div>
+        <div class="exp-body">Managed strategic commercial accounts for one of Africa's largest food retail groups. Developed the commercial discipline and negotiation rigour that has underpinned every leadership role since — including completing formal Corporate Negotiation Training at Cornerstone/Shoprite HQ. Operating inside a highly structured, large-scale business taught the importance of process, compliance, and working at pace within complex organisations.</div>
+        <div class="exp-tags"><span class="exp-tag">Commercial Negotiation</span><span class="exp-tag">Key Accounts</span><span class="exp-tag">Large-scale Operations</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Oct 2015 – Apr 2017</div>
+      <div>
+        <div class="exp-co">Zomato · South Africa</div>
+        <div class="exp-role">Business Developer → Senior Business Developer</div>
+        <div class="exp-body">Joined Zomato's SA launch as an early hire, progressing to Senior BD within 12 months. Grew the restaurant partner network and drove platform adoption during a critical, resource-constrained growth phase. This was the first lesson in scaling something from nothing — limited budget, ambiguous market, high pressure to prove traction fast. It set the template for every startup environment since.</div>
+        <div class="exp-tags"><span class="exp-tag">Startup Launch</span><span class="exp-tag">Partner Acquisition</span><span class="exp-tag">SA Market</span><span class="exp-tag">Rapid Progression</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ASK THE CV -->
+  <div id="tab-ai-demo" class="tab-content">
+    <div class="ai-intro">
+      <strong>This CV thinks.</strong> The chat below is powered by the Claude API — the same AI infrastructure Henré uses to build operational systems at Flyp Homes. Ask about his background, leadership style, or how he'd approach a specific challenge. It's a live demonstration of how he applies AI in practice.
+    </div>
+    <div class="suggested-qs">
+      <button class="sq-btn" onclick="askQuestion('How do you approach reducing operational costs?')">Reducing costs?</button>
+      <button class="sq-btn" onclick="askQuestion('What AI systems have you built and how do they work?')">AI systems built?</button>
+      <button class="sq-btn" onclick="askQuestion('What is your leadership philosophy?')">Leadership philosophy?</button>
+      <button class="sq-btn" onclick="askQuestion('How do you scale operations into a new market?')">New market entry?</button>
+      <button class="sq-btn" onclick="askQuestion('What would you focus on in the first 90 days of a senior ops role?')">First 90 days?</button>
+    </div>
+    <div class="chat-window">
+      <div class="chat-header">
+        <div class="chat-dot"></div>
+        Henré's AI CV assistant · powered by Claude
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg msg-ai">Hi — I'm an AI assistant built on Henré's CV and experience. Ask me anything about his background, how he thinks, or what he'd bring to a senior leadership role.</div>
+      </div>
+      <div class="chat-input-row">
+        <input class="chat-input" id="chatInput" placeholder="Ask about experience, leadership, approach..." onkeydown="if(event.key==='Enter')sendMsg()" />
+        <button class="chat-send" id="chatSend" onclick="sendMsg()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div id="tab-skills" class="tab-content">
+    <p style="font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:1.25rem;">A decade of ops leadership across startups, scale-ups, and property businesses — now with hands-on AI implementation as a genuine differentiator.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-robot" aria-hidden="true"></i></div>
+        <div class="skill-title">AI & automation</div>
+        <div class="skill-desc">Building real AI systems — maintenance triage with Claude API, n8n orchestration, Breezeway and Slack integrations. Not slides about AI. Actual working infrastructure.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
+        <div class="skill-title">Team leadership</div>
+        <div class="skill-desc">Built and scaled multi-disciplinary teams of 30+ across multiple cities. Strong on coaching, performance management, and retaining talent through high-growth pressure.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-trending-up" aria-hidden="true"></i></div>
+        <div class="skill-title">Startup scaling</div>
+        <div class="skill-desc">Set up operations in new markets from scratch — SA and across five UK cities. Knows what it takes to move fast, prove traction, and build systems that outlast the chaos.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-report-money" aria-hidden="true"></i></div>
+        <div class="skill-title">P&L & budget ownership</div>
+        <div class="skill-desc">Held direct P&L accountability at city and function level. Delivered 50% cost reduction through resourcing decisions, not headcount cuts — maintaining service quality throughout.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
+        <div class="skill-title">Client success</div>
+        <div class="skill-desc">Built CS functions from scratch twice. Owns the full loop — NPS, CSAT, churn, health scores, feedback into product. Treats customer metrics as a business health signal, not a vanity number.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-presentation-analytics" aria-hidden="true"></i></div>
+        <div class="skill-title">Stakeholder management</div>
+        <div class="skill-desc">Comfortable at C-level. Influences product and commercial strategy through data and customer insight. Operates well in environments where leadership trust has to be earned, not assumed.</div>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:0.5px solid var(--border-light);">
+      <p style="font-size:12px; font-weight:500; text-transform:uppercase; letter-spacing:0.07em; color:var(--text-secondary); margin-bottom:10px;">AI tools in current use</p>
+      <div class="exp-tags">
+        <span class="exp-tag">Claude API</span><span class="exp-tag">n8n</span><span class="exp-tag">Breezeway</span><span class="exp-tag">Slack automation</span><span class="exp-tag">Gmail / Outlook integration</span><span class="exp-tag">Maintenance triage AI</span><span class="exp-tag">Contractor scoring workflows</span><span class="exp-tag">SLA automation</span>
+      </div>
+    </div>
+    <div style="margin-top:1.25rem; padding:1rem 1.25rem; background:var(--bg-secondary); border-radius:var(--radius-lg);">
+      <p style="font-size:13px; font-weight:500; margin-bottom:4px; color:var(--text-primary);">Education</p>
+      <p style="font-size:13px; color:var(--text-secondary);">BA Environment & Development · University of Stellenbosch</p>
+      <p style="font-size:13px; color:var(--text-secondary); margin-top:4px;">Corporate Negotiation Training · Cornerstone @ Shoprite Holdings</p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="tab-contact" class="tab-content">
+    <p style="font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:1.25rem;">Open to conversations about senior operations leadership, AI-driven property management, and scaling ambitious businesses.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:venterhenre@gmail.com">
+        <div class="contact-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+        <div><div class="contact-label">Email</div><div class="contact-val">venterhenre@gmail.com</div></div>
+      </a>
+      <a class="contact-card" href="tel:+447464408295">
+        <div class="contact-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
+        <div><div class="contact-label">Phone</div><div class="contact-val">+44 7464 408295</div></div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/henr%C3%A9-venter-254740a2" target="_blank" rel="noopener">
+        <div class="contact-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
+        <div><div class="contact-label">LinkedIn</div><div class="contact-val">Henré Venter</div></div>
+      </a>
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+        <div><div class="contact-label">Location</div><div class="contact-val">London, UK</div></div>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem; padding:1.25rem; background:var(--bg-secondary); border-radius:var(--radius-lg);">
+      <p style="font-size:13px; font-weight:500; margin-bottom:8px; color:var(--text-primary);">What I bring to a senior leadership role</p>
+      <ul style="font-size:13px; color:var(--text-secondary); line-height:1.8; padding-left:1rem;">
+        <li>P&L accountability and a track record of delivering cost reduction without sacrificing quality</li>
+        <li>Hands-on AI implementation — building operational infrastructure, not just recommending it</li>
+        <li>Proven ability to enter new markets, set up entities, and scale teams from zero</li>
+        <li>Leadership that develops talent, earns trust at C-level, and builds cultures that retain people</li>
+        <li>A commercial mindset shaped by both startup agility and large-scale enterprise discipline</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    const CV_CONTEXT = `You are an AI assistant representing Henré Venter's interactive CV. Answer questions in first person as if you ARE Henré speaking directly. Be confident, specific, and concise (3-5 sentences). Use numbers wherever possible. Sound like a senior leader — assured but not arrogant.
+
+Key facts:
+- Based in London, UK
+- Currently Head of Portfolio Operations at Flyp Homes (March 2026 – present). P&L responsibility across GX, Operations, and CS teams. Focus: driving yield across the property portfolio. Building AI-powered maintenance triage using n8n, Claude API, Breezeway, Slack, Gmail.
+- Previous: Head of Client Success at Flyp London (Sep 2023 – Mar 2026). Built CS function from scratch. 200+ customers. Owned NPS/CSAT as board-level metrics. Managed CS budget. Influenced product strategy.
+- Houst UKI Manager CS & AM (Jun 2022 – Aug 2023): 30 staff, 5 team leads, 800+ properties. NPS -50 to +20. CSAT 60% to 85%. Delivered 50% cost reduction through smart remote resourcing. Managed full operational budget for UKI CS.
+- Houst Manager Accounts & CS (Aug 2021 – Jun 2022): 5 regional offices across Bath, Brighton, Bristol, East London, Manchester. NPS +54%, CSAT +74%, exceeded commercial OKRs.
+- Houst City Manager Cape Town (Jul 2020 – Aug 2021): Full P&L. Scaled to Southern Suburbs in 2 months. 100 NPS for 6 consecutive months. Major cost savings through supply chain redesign and smart resourcing.
+- Houst Supplier Manager Cape Town (Aug 2018 – Feb 2019): Built supplier/partner network from zero for SA market entry.
+- Shoprite Holdings / Checkers Food Services SA (Apr 2017 – Jul 2018): Key Account Representative. Commercial negotiation training at Cornerstone/Shoprite HQ.
+- Zomato SA (Oct 2015 – Apr 2017): Joined SA launch as Business Developer, promoted to Senior BD in 12 months.
+- Leadership philosophy: the best operations are invisible to the customer and unmistakable on the P&L. Hire well, resource smartly, remove friction, build systems that scale without you.
+- Cost reductions achieved through smart resourcing decisions, not AI.
+- Education: BA Environment & Development, Stellenbosch University. Corporate Negotiation Training, Cornerstone @ Shoprite.
+- Email: venterhenre@gmail.com. Phone: +447464408295.
+- If asked about first 90 days: focus on listening first, mapping the real operational gaps vs perceived ones, identifying the one or two changes with disproportionate impact, and building trust with the team before making big moves.
+- If asked about leadership style: direct, high-trust, high-expectation. Give people clear ownership and get out of their way. Coach through problems rather than solving them. Hold the bar on performance but invest heavily in development.`;
+
+    async function sendMsg() {
+      const input = document.getElementById('chatInput');
+      const q = input.value.trim();
+      if (!q) return;
+      input.value = '';
+      addMsg(q, 'user');
+      await getAIReply(q);
+    }
+
+    async function askQuestion(q) {
+      addMsg(q, 'user');
+      await getAIReply(q);
+    }
+
+    function addMsg(text, role) {
+      const msgs = document.getElementById('chatMessages');
+      const div = document.createElement('div');
+      div.className = 'msg msg-' + (role === 'user' ? 'user' : 'ai');
+      div.textContent = text;
+      msgs.appendChild(div);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    async function getAIReply(question) {
+      const btn = document.getElementById('chatSend');
+      btn.disabled = true;
+      const msgs = document.getElementById('chatMessages');
+      const typing = document.createElement('div');
+      typing.className = 'msg-typing';
+      typing.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+      msgs.appendChild(typing);
+      msgs.scrollTop = msgs.scrollHeight;
+      try {
+        const res = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 1000,
+            system: CV_CONTEXT,
+            messages: [{ role: 'user', content: question }]
+          })
+        });
+        const data = await res.json();
+        typing.remove();
+        const reply = data.content?.[0]?.text || "Happy to tell you more — reach me at venterhenre@gmail.com.";
+        addMsg(reply, 'ai');
+      } catch {
+        typing.remove();
+        addMsg("Something went wrong — reach me directly at venterhenre@gmail.com.", 'ai');
+      }
+      btn.disabled = false;
+    }
+  </script>
+</body>
+</html>
