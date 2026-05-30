@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -430,7 +431,7 @@ Key facts:
       msgs.appendChild(typing);
       msgs.scrollTop = msgs.scrollHeight;
       try {
-        const res = await fetch('https://api.anthropic.com/v1/messages', {
+        const res = await fetch('https://henre-cv-proxy.venterhenre.workers.dev/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
